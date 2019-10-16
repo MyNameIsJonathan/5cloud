@@ -8,17 +8,31 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "babel": "babel -w . --out-dir compiled --presets=react --ignore=node_modules,compiled --source-maps inline"
+    "babel": "babel -w . --out-dir compiled --presets=react --ignore=node_modules,compiled --source-maps inline",
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
+    "identity-obj-proxy": "^3.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
     "babel-core": "^6.23.1",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^6.3.2",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.23.0"
+    "babel-preset-react": "^6.23.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.10.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   }
 }
