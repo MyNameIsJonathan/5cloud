@@ -14,7 +14,7 @@ This was the first music-playback application I've made and was created with use
 
 ## Usage
 
-This application served nostly as a proof-of-concept build that is no longer functional due to the charges incurred by AWS for T2 and S3 hosting (to host the server and music data, respectively)
+This application served nostly as a proof-of-concept build that is no longer functional to reduce charges incurred by AWS for T2 and S3 hosting (to host the server and music data, respectively)
 
 ## Features
 
